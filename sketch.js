@@ -2,14 +2,12 @@ function setup(){
   createCanvas (windowWidth, windowHeight); //rende la canvas larga e alta quanto la finestra di visualizzazione
   background(255,255,255); //colore di sfondo
   angleMode(DEGREES); //converto in gradi i radianti come unità di riferimento
-  fill(0); //0 = nero
-  textSize(20);
-  text("ESERCITAZIONE 2",20,20);
+
  
 
 
 //creo la griglia
-  let numeroTorte = 100 //decido il numero delle torte sullo schermo
+  let numeroTorte = 100//decido il numero delle torte sullo schermo
   let numeroColonne = ceil(sqrt(numeroTorte)); //il numero delle colonne è dato dalla radice quadrata del numero delle torte arrotondato per eccesso con ceil
   let numeroRighe = ceil(numeroTorte/numeroColonne); //il numero delle righe è dato dal numero delle torte / il numero delle colonne,per capire quante righe creare percontenere tutti i 100 eleemnti
   let larghezzaColonna = windowWidth/numeroColonne; //divido la larghezza totale della finestra per il numero delle colonne (arrotondato per eccesso)
@@ -22,7 +20,7 @@ function setup(){
   let yCorrente = 0;
 
   for (let i=0; i<numeroTorte; i++){
-    disegnoTorta(xCorrente + larghezzaColonna / 2, yCorrente + altezzaRiga/0.5, altezzaRiga * 0.8); 
+    disegnoTorta(xCorrente + larghezzaColonna / 2, yCorrente + altezzaRiga/1.3, altezzaRiga * 0.8); 
   //xCorrente +larghezzacolonna/2 é il punto di partenza dal margine sinistro della cella 
   // yCorrente + altezzariga/1.3 è il punto di partenza dal margine superiore
   //QUINDI LA TORTA STA AL CENTRO DELLA CELLA
